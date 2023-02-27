@@ -3,7 +3,7 @@
 namespace app\models\system\service;
 
 use app\models\system\Menu;
-use yii\helpers\Url;
+use app\components\Url;
 use yii\web\NotFoundHttpException;
 
 class MenuService {
@@ -18,7 +18,7 @@ class MenuService {
         $menu = Menu::find()->where(['link' => $url])->one();
 
         if (is_null($menu)) {
-            return ['label' => $url, 'url' => Url::to($url)];
+            return ['label' => $url, 'url' => Url::to([$url])];
         }
 
         return ['label' => $menu->translatedTitle, 'url' => Url::to([$menu->link, 'menu' => $menu->id])];
