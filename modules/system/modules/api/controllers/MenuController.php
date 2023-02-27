@@ -3,9 +3,9 @@
 namespace app\modules\system\modules\api\controllers;
 
 use app\components\BaseRestController;
-use app\components\Toaster\Toaster;
 use app\models\system\Menu;
 use app\models\system\service\MenuService;
+use dashboard\toaster\Toaster;
 use Yii;
 use yii\filters\VerbFilter;
 use yii\web\NotFoundHttpException;
@@ -67,7 +67,7 @@ class MenuController extends BaseRestController {
             if (!$model->save()) {
                 return [
                     'success' => false,
-                    'toaster' => Toaster::DefaultError(),
+                    'toaster' => Toaster::error(),
                     'body' => [
                         'title' => Yii::t('system.message', 'Error'),
                         'message' => Yii::t('system.message', 'Menu failed to update'),
@@ -79,7 +79,7 @@ class MenuController extends BaseRestController {
 
         return [
             'success' => true,
-            'toaster' => Toaster::DefaultSuccess(),
+            'toaster' => Toaster::success(),
             'body' => [
                 'title' => Yii::t('system.message', 'Success'),
                 'message' => Yii::t('system.message', 'Menu successfully updated')

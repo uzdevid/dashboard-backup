@@ -1,9 +1,9 @@
 <?php
 
-use app\components\ModalPage\ModalPage;
 use app\components\Url;
 use app\models\system\Menu;
 use app\models\system\service\MenuService;
+use dashboard\modalpage\ModalPage;
 use yii\grid\ActionColumn;
 use yii\grid\GridView;
 use yii\helpers\Html;
@@ -137,12 +137,12 @@ $this->params['breadcrumbs'][] = $this->title;
 
                 $.post(BASEURL + '/' + LANGUAGE + '/system/api/menu/sort-completed', JSON.stringify({menus: menus}))
                     .done((data) => {
-                        if (data.toaster) {
+                        if (data.toaster.script) {
                             eval(data.toaster.script);
                         }
                     })
                     .fail(function (error) {
-                        toastr.error(error.responseJSON.body.message, error.responseJSON.body.name);
+                        toaster.error(error.responseJSON.body.message, error.responseJSON.body.name);
                     });
             });
         });

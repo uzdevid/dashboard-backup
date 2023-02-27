@@ -55,14 +55,12 @@ use yii\bootstrap5\Html;
                 user_id: '<?php echo $model->id; ?>'
             }),
             success: function (data) {
-                if (data.success) {
-                    toastr.success(data.body.message, data.body.title);
-                } else {
-                    toastr.error(data.body.message, data.body.title);
+                if (data.toaster.script) {
+                    eval(data.toaster.script);
                 }
             },
             error: function (error) {
-                toastr.error(error.responseJSON.body.message, error.responseJSON.body.name);
+                toaster.error(error.responseJSON.body.message, error.responseJSON.body.name);
             }
         });
     }

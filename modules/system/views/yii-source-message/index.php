@@ -1,6 +1,6 @@
 <?php
 
-use app\components\ModalPage\ModalPage;
+use dashboard\modalpage\ModalPage;
 use app\components\Url;
 use app\models\system\search\YiiSourceMessageSearch;
 use app\models\system\service\MenuService;

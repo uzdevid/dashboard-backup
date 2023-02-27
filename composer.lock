@@ -4,14 +4,14 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f90b1e28c02f109fd341d879160ecfab",
+    "content-hash": "5324d19d363947cf04b95c77211a846c",
     "packages": [
         {
             "name": "bower-asset/bootstrap",
             "version": "v5.3.0-alpha1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/twbs/bootstrap.git",
+                "url": "git@github.com:twbs/bootstrap.git",
                 "reference": "cf9454caa00872899215603e5e036d9a824b1b11"
             },
             "dist": {
@@ -208,6 +208,234 @@
                 "source": "https://github.com/codemix/yii2-localeurls/tree/1.8.0"
             },
             "time": "2022-05-04T06:51:52+00:00"
+        },
+        {
+            "name": "dashboard/header",
+            "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/uzdevid/dashboard-header.git",
+                "reference": "694fb3bb46600a87f4996d792bc26c5df59d3549"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/uzdevid/dashboard-header/zipball/694fb3bb46600a87f4996d792bc26c5df59d3549",
+                "reference": "694fb3bb46600a87f4996d792bc26c5df59d3549",
+                "shasum": ""
+            },
+            "require": {
+                "yiisoft/yii2": "~2.0.0"
+            },
+            "default-branch": true,
+            "type": "yii2-extension",
+            "autoload": {
+                "psr-4": {
+                    "dashboard\\header\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Ibragimov Diyorbek",
+                    "email": "uzdevid@gmail.com"
+                }
+            ],
+            "description": "Dashboard Header",
+            "keywords": [
+                "dashboard",
+                "yii2"
+            ],
+            "support": {
+                "issues": "https://github.com/uzdevid/dashboard-header/issues",
+                "source": "https://github.com/uzdevid/dashboard-header/tree/main"
+            },
+            "time": "2023-02-27T07:26:58+00:00"
+        },
+        {
+            "name": "dashboard/modal-page",
+            "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/uzdevid/dashboard-modal-page.git",
+                "reference": "5d0988734a8b7495014977fd448745f79bd902ab"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/uzdevid/dashboard-modal-page/zipball/5d0988734a8b7495014977fd448745f79bd902ab",
+                "reference": "5d0988734a8b7495014977fd448745f79bd902ab",
+                "shasum": ""
+            },
+            "require": {
+                "yiisoft/yii2": "~2.0.0"
+            },
+            "default-branch": true,
+            "type": "yii2-extension",
+            "autoload": {
+                "psr-4": {
+                    "dashboard\\modalpage\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Ibragimov Diyorbek",
+                    "email": "uzdevid@gmail.com"
+                }
+            ],
+            "description": "Dashboard Modal Page",
+            "keywords": [
+                "dashboard",
+                "modal page",
+                "yii2"
+            ],
+            "support": {
+                "issues": "https://github.com/uzdevid/dashboard-modal-page/issues",
+                "source": "https://github.com/uzdevid/dashboard-modal-page/tree/main"
+            },
+            "time": "2023-02-27T09:22:47+00:00"
+        },
+        {
+            "name": "dashboard/offcanvas-page",
+            "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/uzdevid/dashboard-offcanvas-page.git",
+                "reference": "884dc844f1e29fe598489b15ac59a1dbdbd5ddfa"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/uzdevid/dashboard-offcanvas-page/zipball/884dc844f1e29fe598489b15ac59a1dbdbd5ddfa",
+                "reference": "884dc844f1e29fe598489b15ac59a1dbdbd5ddfa",
+                "shasum": ""
+            },
+            "require": {
+                "yiisoft/yii2": "~2.0.0"
+            },
+            "default-branch": true,
+            "type": "yii2-extension",
+            "autoload": {
+                "psr-4": {
+                    "dashboard\\offcanvaspage\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Ibragimov Diyorbek",
+                    "email": "uzdevid@gmail.com"
+                }
+            ],
+            "description": "offcanvas",
+            "keywords": [
+                "dashboard",
+                "offcanvas page",
+                "yii2"
+            ],
+            "support": {
+                "issues": "https://github.com/uzdevid/dashboard-offcanvas-page/issues",
+                "source": "https://github.com/uzdevid/dashboard-offcanvas-page/tree/main"
+            },
+            "time": "2023-02-27T09:23:25+00:00"
+        },
+        {
+            "name": "dashboard/sidebar",
+            "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/uzdevid/dashboard-sidebar.git",
+                "reference": "fa6f4321415b92bcf627f5fc55ff113188779b6e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/uzdevid/dashboard-sidebar/zipball/fa6f4321415b92bcf627f5fc55ff113188779b6e",
+                "reference": "fa6f4321415b92bcf627f5fc55ff113188779b6e",
+                "shasum": ""
+            },
+            "require": {
+                "yiisoft/yii2": "~2.0.0"
+            },
+            "default-branch": true,
+            "type": "yii2-extension",
+            "autoload": {
+                "psr-4": {
+                    "dashboard\\sidebar\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Ibragimov Diyorbek",
+                    "email": "uzdevid@gmail.com"
+                }
+            ],
+            "description": "Dashboard Side Bar",
+            "keywords": [
+                "dashboard",
+                "yii2"
+            ],
+            "support": {
+                "issues": "https://github.com/uzdevid/dashboard-sidebar/issues",
+                "source": "https://github.com/uzdevid/dashboard-sidebar/tree/main"
+            },
+            "time": "2023-02-27T07:43:19+00:00"
+        },
+        {
+            "name": "dashboard/toaster",
+            "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/uzdevid/dashboard-toaster.git",
+                "reference": "45459340ce61fcf7af5b6a15c703f69491d7c4be"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/uzdevid/dashboard-toaster/zipball/45459340ce61fcf7af5b6a15c703f69491d7c4be",
+                "reference": "45459340ce61fcf7af5b6a15c703f69491d7c4be",
+                "shasum": ""
+            },
+            "require": {
+                "yiisoft/yii2": "~2.0.0"
+            },
+            "default-branch": true,
+            "type": "yii2-extension",
+            "autoload": {
+                "psr-4": {
+                    "dashboard\\toaster\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Ibragimov Diyorbek",
+                    "email": "uzdevid@gmail.com"
+                }
+            ],
+            "description": "Dashboard Toaster",
+            "keywords": [
+                "dashboard",
+                "toaster",
+                "yii2"
+            ],
+            "support": {
+                "issues": "https://github.com/uzdevid/dashboard-toaster/issues",
+                "source": "https://github.com/uzdevid/dashboard-toaster/tree/main"
+            },
+            "time": "2023-02-27T09:27:43+00:00"
         },
         {
             "name": "doctrine/lexer",
@@ -5699,7 +5927,13 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "dashboard/header": 20,
+        "dashboard/sidebar": 20,
+        "dashboard/modal-page": 20,
+        "dashboard/offcanvas-page": 20,
+        "dashboard/toaster": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {

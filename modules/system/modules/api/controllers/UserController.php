@@ -3,8 +3,8 @@
 namespace app\modules\system\modules\api\controllers;
 
 use app\components\BaseRestController;
-use app\components\Toaster\Toaster;
 use app\models\system\ActionUser;
+use dashboard\toaster\Toaster;
 use Yii;
 use yii\filters\VerbFilter;
 use yii\web\BadRequestHttpException;
@@ -42,7 +42,7 @@ class UserController extends BaseRestController {
 
             return [
                 'success' => true,
-                'toaster' => Toaster::DefaultSuccess(),
+                'toaster' => Toaster::success(),
                 'body' => [
                     'title' => Yii::t('system.message', 'Success'),
                     'message' => Yii::t('system.message', 'Access is denied')
@@ -56,7 +56,7 @@ class UserController extends BaseRestController {
         if (!$actionUser->save()) {
             return [
                 'success' => false,
-                'toaster' => Toaster::DefaultError(),
+                'toaster' => Toaster::error(),
                 'body' => [
                     'title' => Yii::t('system.message', 'Error'),
                     'message' => Yii::t('system.message', 'Access is not allowed'),
@@ -67,7 +67,7 @@ class UserController extends BaseRestController {
 
         return [
             'success' => true,
-            'toaster' => Toaster::DefaultSuccess(),
+            'toaster' => Toaster::success(),
             'body' => [
                 'title' => Yii::t('system.message', 'Success'),
                 'message' => Yii::t('system.message', 'Access is allowed')

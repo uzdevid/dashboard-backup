@@ -2,8 +2,8 @@
 
 namespace app\modules\system\controllers;
 
-use app\components\ModalPage\ModalPage;
-use app\components\ModalPage\ModalPageOptions;
+use dashboard\modalpage\ModalPage;
+use dashboard\modalpage\ModalPageOptions;
 use app\components\Toaster\Toaster;
 use app\components\Url;
 use app\models\system\Contact;
@@ -64,7 +64,7 @@ class ContactController extends Controller {
             return [
                 'success' => true,
                 'modal' => $modal,
-                'toaster' => Toaster::DefaultSuccess(),
+                'toaster' => Toaster::success(),
                 'body' => [
                     'title' => ModalPage::title(Yii::t('system.content', 'Create Contact'), '<i class="bi bi-envelope"></i>'),
                     'view' => $view
@@ -94,7 +94,7 @@ class ContactController extends Controller {
             return [
                 'success' => true,
                 'modal' => $modal,
-                'toaster' => Toaster::DefaultSuccess(),
+                'toaster' => Toaster::success(),
                 'body' => [
                     'title' => ModalPage::title(Yii::t('system.content', 'Update Contact: {contact}', ['contact' => $model->type]), '<i class="bi bi-envelope"></i>'),
                     'view' => $view

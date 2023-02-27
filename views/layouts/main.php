@@ -1,13 +1,21 @@
 <?php
 
 use app\assets\AppAsset;
-use app\components\Header\Header;
-use app\components\ModalPage\ModalPage;
-use app\components\OffCanvas\OffCanvas;
-use app\components\SideBar\SideBar;
+use dashboard\header\Header;
+use dashboard\modalpage\ModalPage;
+use dashboard\modalpage\ModalPageAsset;
+use dashboard\offcanvaspage\OffCanvas;
+use dashboard\sidebar\SideBar;
+use dashboard\toaster\ToasterAsset;
 use yii\bootstrap5\Breadcrumbs;
+use yii\web\View;
 
 /** @var string $content */
+/** @var View $this */
+
+AppAsset::register($this);
+ToasterAsset::register($this);
+ModalPageAsset::register($this);
 ?>
 <?php $this->beginPage(); ?>
     <!DOCTYPE html>
@@ -30,7 +38,6 @@ use yii\bootstrap5\Breadcrumbs;
             const LANGUAGE = '<?php echo Yii::$app->language; ?>';
         </script>
 
-        <?php AppAsset::register($this); ?>
 
         <?php $this->head(); ?>
     </head>
@@ -59,7 +66,7 @@ use yii\bootstrap5\Breadcrumbs;
     </footer>
 
     <?php echo OffCanvas::widget(); ?>
-    
+
     <?php echo ModalPage::widget(); ?>
 
     <?php $this->endBody(); ?>

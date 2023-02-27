@@ -3,8 +3,8 @@
 namespace app\modules\system\controllers;
 
 use app\components\BaseController;
-use app\components\ModalPage\ModalPage;
-use app\components\ModalPage\ModalPageOptions;
+use dashboard\modalpage\ModalPage;
+use dashboard\modalpage\ModalPageOptions;
 use app\components\Toaster\Toaster;
 use app\components\Url;
 use app\models\system\NotificationType;
@@ -100,7 +100,7 @@ class NotificationTypeController extends BaseController {
             return [
                 'success' => true,
                 'modal' => $modal,
-                'toaster' => Toaster::DefaultSuccess(),
+                'toaster' => Toaster::success(),
                 'body' => [
                     'title' => ModalPage::title(Yii::t('system.content', 'Create Notification Type'), '<i class="bi bi-bell"></i>'),
                     'view' => $view

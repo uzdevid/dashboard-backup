@@ -2,9 +2,9 @@
 
 namespace app\modules\system\controllers;
 
-use app\components\ModalPage\ModalPage;
-use app\components\OffCanvas\OffCanvas;
-use app\components\OffCanvas\OffCanvasOptions;
+use dashboard\modalpage\ModalPage;
+use dashboard\offcanvaspage\OffCanvas;
+use dashboard\offcanvaspage\OffCanvasOptions;
 use app\models\system\Menu;
 use app\models\system\Notification;
 use Yii;

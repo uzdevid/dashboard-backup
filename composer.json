@@ -23,7 +23,12 @@
     "whichbrowser/parser": "^2.1",
     "ext-json": "*",
     "vlucas/phpdotenv": "^5.5",
-    "yiisoft/yii2-symfonymailer": "^3.0"
+    "yiisoft/yii2-symfonymailer": "^3.0",
+    "dashboard/header": "dev-main",
+    "dashboard/sidebar": "dev-main",
+    "dashboard/modal-page": "dev-main",
+    "dashboard/offcanvas-page": "dev-main",
+    "dashboard/toaster": "dev-main"
   },
   "require-dev": {
     "yiisoft/yii2-debug": "~2.1.0",

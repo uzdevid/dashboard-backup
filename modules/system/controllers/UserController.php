@@ -3,8 +3,8 @@
 namespace app\modules\system\controllers;
 
 use app\components\BaseController;
-use app\components\ModalPage\ModalPage;
-use app\components\ModalPage\ModalPageOptions;
+use dashboard\modalpage\ModalPage;
+use dashboard\modalpage\ModalPageOptions;
 use app\components\Url;
 use app\models\system\search\UserSearch;
 use app\models\system\service\ActionService;

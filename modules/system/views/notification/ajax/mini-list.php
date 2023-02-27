@@ -1,7 +1,7 @@
 <?php
 
-use app\components\OffCanvas\OffCanvas;
-use app\components\SideBar\View;
+use dashboard\offcanvaspage\OffCanvas;
+use dashboard\SideBar\View;
 use app\components\Url;
 use app\models\system\Notification;
 use app\models\system\service\NotificationService;

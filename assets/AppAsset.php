@@ -29,7 +29,6 @@ class AppAsset extends AssetBundle {
         '/vendor/simple-datatables/style.css',
         '/vendor/jquery-ui/css/style.css',
         '/vendor/sortable-list/css/treeSortable.css',
-        '/vendor/toaster/css/toastr.min.css',
         '/vendor/choices/css/choices.min.css',
         '/css/dashboard.css',
         //
@@ -44,9 +43,6 @@ class AppAsset extends AssetBundle {
         '/vendor/simple-datatables/simple-datatables.js',
         '/vendor/tinymce/tinymce.min.js',
         '/vendor/jquery-ui/js/script.js',
-        '/vendor/toaster/js/toastr.min.js',
-        '/vendor/modal-page/js/script.js',
-        '/vendor/offcanvas-page/js/script.js',
         '/js/notifications-badge.js',
         [
             '/vendor/choices/js/choices.min.js',
