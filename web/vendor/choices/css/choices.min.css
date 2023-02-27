@@ -32,7 +32,7 @@
 }
 
 .choices[data-type*=select-one] .choices__inner {
-    padding-bottom: 7.5px
+    padding-bottom: 0px
 }
 
 .choices[data-type*=select-one] .choices__input {
@@ -157,7 +157,7 @@
 
 .choices__list--single {
     display: inline-block;
-    padding: 4px 16px 4px 4px;
+    padding: 7px 16px 4px 4px;
     width: 100%
 }
 
@@ -211,7 +211,7 @@
 
 .choices__list--dropdown {
     visibility: hidden;
-    z-index: 1;
+    z-index: 9;
     position: absolute;
     width: 100%;
     background-color: #fff;
