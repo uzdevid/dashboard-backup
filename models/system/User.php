@@ -57,11 +57,13 @@ class User extends ActiveRecord implements IdentityInterface {
             [['email', 'surname', 'name', 'role_id', 'language'], 'required'],
             [['last_activity_time', 'last_update_time', 'create_time'], 'safe'],
             [['email'], 'string', 'max' => 32],
+            [['email'], 'email'],
             [['surname', 'name', 'image', 'password'], 'string', 'max' => 255],
             [['language'], 'string', 'max' => 2],
             [['email'], 'unique'],
             [['role_id'], 'exist', 'skipOnError' => true, 'targetClass' => Role::class, 'targetAttribute' => ['role_id' => 'id']],
             //
+            [['new_password'], 'required', 'on' => 'resetPassword'],
             [['new_password'], 'string', 'min' => 6],
             [['new_password'], 'match', 'pattern' => '/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).+$/', 'message' => Yii::t('system.message', 'Password must contain at least one uppercase letter, one lowercase letter and one number.')],
             [['image'], 'image', 'skipOnError' => false, 'extensions' => 'png, jpg, jpeg'],
@@ -213,6 +215,14 @@ class User extends ActiveRecord implements IdentityInterface {
     }
 
     /**
+     * @param $email
+     * @return User|null
+     */
+    public static function findByEmail($email): ?User {
+        return static::findOne(['email' => $email]);
+    }
+
+    /**
      * @return string
      */
     public function getFullname(): string {
@@ -254,5 +264,9 @@ class User extends ActiveRecord implements IdentityInterface {
         $this->unlinkAll('modifyLogs', true);
 
         return parent::beforeDelete();
+    }
+
+    public function resetPassword() {
+        $this->password = Yii::$app->getSecurity()->generatePasswordHash($this->new_password);
     }
 }

@@ -16,6 +16,7 @@ use yii\web\View;
                 <div class="pt-4 pb-2 px-5">
                     <h5 class="card-title text-center pb-0 fs-4"><?php echo Yii::t('system.message', 'Error'); ?></h5>
                     <p class="text-center small"><?php echo $exception->getMessage(); ?></p>
+                    <?php echo $_SERVER['REQUEST_URI']; ?>
                 </div>
             </div>
         </div>

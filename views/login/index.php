@@ -43,7 +43,7 @@ use yii\bootstrap5\Html;
                                 ],
                             ]); ?>
 
-                            <?php echo $form->field($model, 'email', ['template' => $this->params['layouts']['fields']['email']])->textInput(); ?>
+                            <?php echo $form->field($model, 'email', ['template' => $this->params['layouts']['fields']['email']])->textInput(['type' => 'email']); ?>
 
                             <?php echo $form->field($model, 'password', ['template' => $this->params['layouts']['fields']['password']])->textInput(['type' => 'password']); ?>
 

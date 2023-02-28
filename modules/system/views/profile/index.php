@@ -1,8 +1,8 @@
 <?php
 
-use dashboard\modalpage\ModalPage;
 use app\components\Url;
 use app\models\system\User;
+use dashboard\modalpage\ModalPage;
 use yii\bootstrap5\ActiveForm;
 use yii\bootstrap5\Html;
 use yii\web\View;
@@ -20,6 +20,7 @@ use yii\web\View;
                 <div class="card-body">
                     <h5 class="card-title"><?php echo Yii::t('system.content', 'Your general data'); ?></h5>
                     <?php $form = ActiveForm::begin([
+                        'id' => 'profile-form',
                         'fieldConfig' => [
                             'template' => '<div class="form-floating mb-3">{input}{label}{error}</div>',
                             'labelOptions' => ['class' => 'form-label'],
@@ -45,6 +46,7 @@ use yii\web\View;
                     <h5 class="card-title"><?php echo Yii::t('system.content', 'Change password'); ?></h5>
 
                     <?php $form = ActiveForm::begin([
+                        'id' => 'reset-password-form',
                         'fieldConfig' => [
                             'template' => '<div class="form-floating mb-3">{input}{label}{error}</div>',
                             'labelOptions' => ['class' => ''],
@@ -52,7 +54,7 @@ use yii\web\View;
                             'errorOptions' => ['class' => 'invalid-feedback'],
                         ],
                     ]); ?>
-
+                    <?php $user->scenario = 'resetPassword'; ?>
                     <?php echo $form->field($user, 'new_password')->textInput(['type' => 'password', 'placeholder' => $user->getAttributeLabel('new_password')]); ?>
 
                     <div class="text-end">
@@ -72,7 +74,7 @@ use yii\web\View;
                             <h5 class="card-title"><?php echo Yii::t('system.content', 'Your contacts'); ?></h5>
                         </div>
                         <div class="col text-end">
-                            <?php echo ModalPage::link(Yii::t('system.crud', 'Create'), ['/system/contact/create'], ['class' => 'btn btn-primary py-1 px-3']); ?>
+                            <?php echo ModalPage::link(Yii::t('system.content', 'Create Contact'), Url::to(['/system/contact/create']), ['class' => 'btn btn-primary py-1 px-3']); ?>
                         </div>
                     </div>
 

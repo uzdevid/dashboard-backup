@@ -38,11 +38,15 @@ class ProfileController extends Controller {
         $image = UserService::uploadImage($user, UploadedFile::getInstance($user, 'image'));
 
         $user->load($this->request->post());
+
         if ($user->new_password != null) {
-            $user->password = Yii::$app->security->generatePasswordHash($user->new_password);
-            if ($user->save()) {
-                Yii::$app->session->setFlash('success', Yii::t('system.message', 'Password changed successfully'));
-                return $this->refresh();
+            $user->scenario = 'resetPassword';
+            if ($user->validate(['new_password'])) {
+                $user->resetPassword();
+                if ($user->save()) {
+                    Yii::$app->session->setFlash('success', Yii::t('system.message', 'Password changed successfully'));
+                    return $this->refresh();
+                }
             }
         }
 

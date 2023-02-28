@@ -1,0 +1,16 @@
+actor: AcceptanceTester
+modules:
+  enabled:
+    - Asserts
+    - WebDriver:
+        url: http://dashboard.yii2
+        browser: chrome
+        host: 192.168.1.107
+        port: 4444
+    - Yii2:
+        part: [ orm, email ]
+        configFile: 'config/web.php'
+step_decorators:
+  - Codeception\Step\ConditionalAssertion
+  - Codeception\Step\TryTo
+  - Codeception\Step\Retry

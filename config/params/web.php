@@ -1,7 +1,6 @@
 <?php
-$http = 'http';
-$host = $_SERVER['HTTP_HOST'];
-$url = $http . '://' . $host;
+
+$url = "http://dashboard.yii2";
 
 return [
     'url' => $url,

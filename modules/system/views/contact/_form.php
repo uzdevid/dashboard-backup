@@ -10,15 +10,15 @@ use yii\widgets\ActiveForm;
 ?>
 
 
-<?php $form = ActiveForm::begin(); ?>
+<?php $form = ActiveForm::begin(['id' => 'contact-create-form']); ?>
 
 <?php echo $form->field($model, 'type', ['options' => ['class' => 'mb-3']])->dropDownList(ContactService::typesList()); ?>
 
 <?php echo $form->field($model, 'contact', ['options' => ['class' => 'mb-3']])->textInput(['maxlength' => true]); ?>
 
-    <div class="form-group text-end">
-        <?php echo Html::submitButton(Yii::t('system.crud', 'Save'), ['class' => 'btn btn-success']); ?>
-    </div>
+<div class="form-group text-end">
+    <?php echo Html::submitButton(Yii::t('system.crud', 'Save'), ['class' => 'btn btn-success']); ?>
+</div>
 
 <?php ActiveForm::end(); ?>
 

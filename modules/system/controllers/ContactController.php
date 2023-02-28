@@ -2,11 +2,11 @@
 
 namespace app\modules\system\controllers;
 
-use dashboard\modalpage\ModalPage;
-use dashboard\modalpage\ModalPageOptions;
-use app\components\Toaster\Toaster;
 use app\components\Url;
 use app\models\system\Contact;
+use dashboard\modalpage\ModalPage;
+use dashboard\modalpage\ModalPageOptions;
+use dashboard\toaster\Toaster;
 use Yii;
 use yii\filters\AccessControl;
 use yii\filters\VerbFilter;
